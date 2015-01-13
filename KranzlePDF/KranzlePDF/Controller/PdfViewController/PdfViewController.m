@@ -47,7 +47,7 @@
 #pragma mark mail
 
 - (void)mail {
-    [self mailTo: @"ros.aphex@gmail.com"];
+    [self mailTo: @"info@cluster-one.eu"];
 }
 
 - (void)mailTo:(NSString *)mail {
