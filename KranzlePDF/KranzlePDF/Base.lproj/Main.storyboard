@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Irh-gu-ro4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LOP-fo-3vV">
+            <objects>
+                <navigationController id="Irh-gu-ro4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M7K-ue-mgU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rqO-HU-W49" kind="relationship" relationship="rootViewController" id="ydb-2y-mfu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3G7-AN-DHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1858.4999999999998" y="221.99999999999997"/>
+        </scene>
+        <!--Input Customer Number View Controller-->
+        <scene sceneID="f37-lK-HnJ">
+            <objects>
+                <viewController id="rqO-HU-W49" customClass="InputCustomerNumberViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bd0-3P-kgd"/>
+                        <viewControllerLayoutGuide type="bottom" id="L5h-L9-foA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u2P-OR-pbh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="34034" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FvG-qF-LqZ">
+                                <rect key="frame" x="506" y="89" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="5Sa-AY-Rl5"/>
+                                    <constraint firstAttribute="height" constant="30" id="Un9-l2-bqv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5Sa-AY-Rl5"/>
+                                        <exclude reference="Un9-l2-bqv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5Sa-AY-Rl5"/>
+                                        <include reference="Un9-l2-bqv"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4he-bB-MHk">
+                                <rect key="frame" x="156" y="149" width="288" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="7wE-Im-LXc"/>
+                                    <constraint firstAttribute="height" constant="94" id="tJI-Ox-zIh"/>
+                                </constraints>
+                                <state key="normal" image="button-view-pdf.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7wE-Im-LXc"/>
+                                        <exclude reference="tJI-Ox-zIh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7wE-Im-LXc"/>
+                                        <include reference="tJI-Ox-zIh"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="parseButtonClicked:" destination="rqO-HU-W49" eventType="touchUpInside" id="E5V-gp-42k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Customer number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v4-uO-1zU">
+                                <rect key="frame" x="64" y="98" width="425" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="4vf-9z-T8n"/>
+                                    <constraint firstAttribute="width" constant="172" id="gpB-nA-QvX">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="152"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4vf-9z-T8n"/>
+                                        <exclude reference="gpB-nA-QvX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4vf-9z-T8n"/>
+                                        <include reference="gpB-nA-QvX"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FvG-qF-LqZ" firstAttribute="top" secondItem="bd0-3P-kgd" secondAttribute="bottom" constant="38" id="2Qi-zU-IEb">
+                                <variation key="heightClass=regular-widthClass=compact" constant="39"/>
+                            </constraint>
+                            <constraint firstItem="4v4-uO-1zU" firstAttribute="top" secondItem="bd0-3P-kgd" secondAttribute="bottom" constant="42" id="2e9-nD-FDc"/>
+                            <constraint firstAttribute="centerX" secondItem="4he-bB-MHk" secondAttribute="centerX" id="5uB-pN-fkb"/>
+                            <constraint firstItem="FvG-qF-LqZ" firstAttribute="leading" secondItem="4v4-uO-1zU" secondAttribute="trailing" constant="4" id="Ci5-yA-CdH">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-5"/>
+                            </constraint>
+                            <constraint firstItem="4v4-uO-1zU" firstAttribute="leading" secondItem="u2P-OR-pbh" secondAttribute="leading" constant="56" id="gOH-UR-g34">
+                                <variation key="heightClass=regular-widthClass=compact" constant="51"/>
+                            </constraint>
+                            <constraint firstItem="4he-bB-MHk" firstAttribute="top" secondItem="FvG-qF-LqZ" secondAttribute="bottom" constant="29" id="yNP-0C-fx3">
+                                <variation key="heightClass=regular-widthClass=compact" constant="28"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2e9-nD-FDc"/>
+                                <exclude reference="gOH-UR-g34"/>
+                                <exclude reference="5uB-pN-fkb"/>
+                                <exclude reference="yNP-0C-fx3"/>
+                                <exclude reference="2Qi-zU-IEb"/>
+                                <exclude reference="Ci5-yA-CdH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="2e9-nD-FDc"/>
+                                <include reference="gOH-UR-g34"/>
+                                <include reference="5uB-pN-fkb"/>
+                                <include reference="yNP-0C-fx3"/>
+                                <include reference="2Qi-zU-IEb"/>
+                                <include reference="Ci5-yA-CdH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="NRZ-Y7-EpD"/>
+                    <connections>
+                        <outlet property="customerNumberTextField" destination="FvG-qF-LqZ" id="wMQ-oq-M4i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="08u-at-vfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1165.5" y="261.75"/>
+        </scene>
+        <!--PDF-->
+        <scene sceneID="1Re-Ea-rkM">
+            <objects>
+                <viewController storyboardIdentifier="PdfViewControllerID" id="Z6e-x0-8lc" customClass="PdfViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="srY-ws-LTk"/>
+                        <viewControllerLayoutGuide type="bottom" id="1nn-ph-1jy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dVS-C6-X9R">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PDF" id="W3E-JJ-Stc"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J73-A2-cGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-529.5" y="246.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button-view-pdf.png" width="288" height="94"/>
+    </resources>
+</document>
