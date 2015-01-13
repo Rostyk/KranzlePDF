@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface PdfViewController : UIViewController
+@interface PdfViewController : UIViewController<MFMailComposeViewControllerDelegate>
 
 @end

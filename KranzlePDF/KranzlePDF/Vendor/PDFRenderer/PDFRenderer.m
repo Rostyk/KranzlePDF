@@ -70,8 +70,8 @@
         CGContextSaveGState(ctx);
         CGContextScaleCTM(ctx, 1, -1);
         if(page == 1) {
-           [self drawText: self.customer.name context:ctx origin:CGPointMake(160, 159)];
-           [self drawText: self.customer.street context:ctx origin:CGPointMake(160, 178)];
+           [self drawText: self.customer.name context:ctx origin:CGPointMake(160, 158)];
+           [self drawText: self.customer.street context:ctx origin:CGPointMake(160, 176)];
         }
         CGContextRestoreGState(ctx);
     }
