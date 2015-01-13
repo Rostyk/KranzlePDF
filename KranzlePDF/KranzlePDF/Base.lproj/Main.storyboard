@@ -39,7 +39,7 @@
                                     <constraint firstAttribute="height" constant="30" id="Un9-l2-bqv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="5Sa-AY-Rl5"/>
@@ -53,7 +53,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4he-bB-MHk">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4he-bB-MHk">
                                 <rect key="frame" x="156" y="149" width="288" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="7wE-Im-LXc"/>
@@ -78,7 +78,7 @@
                                     <action selector="parseButtonClicked:" destination="rqO-HU-W49" eventType="touchUpInside" id="E5V-gp-42k"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Customer number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v4-uO-1zU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Customer number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v4-uO-1zU">
                                 <rect key="frame" x="64" y="98" width="425" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="4vf-9z-T8n"/>
@@ -159,6 +159,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1nn-ph-1jy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dVS-C6-X9R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

@@ -10,44 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KranzlePDF/Vendor/PDFRenderer/PDFRenderer.m"
-            timestampString = "442802066.373836"
+            timestampString = "442835737.118066"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "-drawText:context:inFrame:"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "-drawText:context:origin:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KranzlePDF/Vendor/PDFRenderer/PDFRenderer.m"
-            timestampString = "442801984.958392"
+            timestampString = "442835326.744105"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "-insertName:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "KranzlePDF/Vendor/PDFRenderer/PDFRenderer.m"
-            timestampString = "442801987.859789"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "-insertName:"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-render"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
