@@ -17,6 +17,7 @@
 		9184E3D71A649D340055BD4E /* PdfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9184E3D61A649D340055BD4E /* PdfViewController.m */; };
 		91D5CFA31A646CB300F8ECF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D5CF9F1A646CB300F8ECF5 /* AppDelegate.m */; };
 		91D5CFA91A646D8500F8ECF5 /* InputCustomerNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D5CFA81A646D8500F8ECF5 /* InputCustomerNumberViewController.m */; };
+		91DAF2971A651E8B00CE18B9 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DAF2961A651E8B00CE18B9 /* Customer.m */; };
 		91EA950A1A6469D600757A87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EA95091A6469D600757A87 /* main.m */; };
 		91EA95131A6469D600757A87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91EA95111A6469D600757A87 /* Main.storyboard */; };
 		91EA95151A6469D600757A87 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91EA95141A6469D600757A87 /* Images.xcassets */; };
@@ -41,6 +42,8 @@
 		91D5CF9F1A646CB300F8ECF5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		91D5CFA71A646D8500F8ECF5 /* InputCustomerNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputCustomerNumberViewController.h; sourceTree = "<group>"; };
 		91D5CFA81A646D8500F8ECF5 /* InputCustomerNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCustomerNumberViewController.m; sourceTree = "<group>"; };
+		91DAF2951A651E8B00CE18B9 /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Customer.h; path = Model/Customer.h; sourceTree = "<group>"; };
+		91DAF2961A651E8B00CE18B9 /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Customer.m; path = Model/Customer.m; sourceTree = "<group>"; };
 		91EA95041A6469D600757A87 /* KranzlePDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KranzlePDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91EA95081A6469D600757A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91EA95091A6469D600757A87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -155,6 +158,15 @@
 			path = Vendor;
 			sourceTree = "<group>";
 		};
+		91DAF2941A651E6A00CE18B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91DAF2951A651E8B00CE18B9 /* Customer.h */,
+				91DAF2961A651E8B00CE18B9 /* Customer.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		91EA94FB1A6469D600757A87 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +187,7 @@
 		91EA95061A6469D600757A87 /* KranzlePDF */ = {
 			isa = PBXGroup;
 			children = (
+				91DAF2941A651E6A00CE18B9 /* Model */,
 				9184E3C01A6476020055BD4E /* Resources */,
 				91D5CFAA1A646DB100F8ECF5 /* Vendor */,
 				91D5CFA51A646D3800F8ECF5 /* Controller */,
@@ -276,6 +289,7 @@
 				91D5CFA31A646CB300F8ECF5 /* AppDelegate.m in Sources */,
 				91EA950A1A6469D600757A87 /* main.m in Sources */,
 				9184E3C61A647AF90055BD4E /* DataProvider.m in Sources */,
+				91DAF2971A651E8B00CE18B9 /* Customer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

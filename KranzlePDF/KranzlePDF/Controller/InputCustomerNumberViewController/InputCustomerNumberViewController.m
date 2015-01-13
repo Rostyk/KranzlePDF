@@ -11,6 +11,7 @@
 #import "PDFRenderer.h"
 #import "Constants.h"
 #import "PdfViewController.h"
+#import "Customer.h"
 
 @interface InputCustomerNumberViewController()
 @property (nonatomic, weak) IBOutlet UITextField *customerNumberTextField;
@@ -31,8 +32,10 @@
 
 - (IBAction)parseButtonClicked:(id)sender {
     NSString *customerNumber = self.customerNumberTextField.text;
-    NSString *name = [[DataProvider sharedProvider] recordForCustomerNumber:customerNumber][COLUMN_NAME];
-    [[PDFRenderer sharedRenderer] insertName:name];
+    NSArray *customerRecord = [[DataProvider sharedProvider] recordForCustomerNumber:customerNumber];
+    Customer *customer = [[Customer alloc] initWithRecord: customerRecord];
+    [[PDFRenderer sharedRenderer] insertCustomerData: customer];
+    [[PDFRenderer sharedRenderer] render];
     
     
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];

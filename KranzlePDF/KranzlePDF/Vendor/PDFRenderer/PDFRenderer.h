@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Customer;
 
 @interface PDFRenderer : NSObject
 
 + (instancetype)sharedRenderer;
 
-- (void)insertName:(NSString*)name;
+- (void)insertCustomerData:(Customer*)customer;
+- (void)render;
 @end

@@ -11,4 +11,5 @@
 
 #define COLUMN_NUMBER           0
 #define COLUMN_NAME             1
+#define COLUMN_STREET           4
 #endif

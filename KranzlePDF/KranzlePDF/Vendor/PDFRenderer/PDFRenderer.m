@@ -9,6 +9,11 @@
 #import "PDFRenderer.h"
 #import <UIKit/UIKit.h>
 #import "CoreText/CoreText.h"
+#import "Customer.h"
+
+@interface PDFRenderer()
+@property (nonatomic, strong) Customer *customer;
+@end
 
 @implementation PDFRenderer
 
@@ -29,7 +34,13 @@
 
 #pragma mark insert predefined text
 
-- (void)insertName:(NSString*)name{
+- (void)insertCustomerData:(Customer*)customer {
+    self.customer = customer;
+}
+
+
+#pragma mark rendering
+- (void)render{
     CGPDFDocumentRef pdf = CGPDFDocumentCreateWithURL((CFURLRef)[[NSBundle mainBundle] URLForResource:@"Fachhandelspartner" withExtension:@"pdf"]);
     
     const size_t numberOfPages = CGPDFDocumentGetNumberOfPages(pdf);
@@ -54,13 +65,13 @@
         CGContextTranslateCTM(ctx, 0, pageFrame.size.height);
         CGContextScaleCTM(ctx, 1, -1);
         
-       
-       
         CGContextDrawPDFPage(ctx, pdfPage);
         CGContextRestoreGState(ctx);
         CGContextSaveGState(ctx);
-        [self drawText: name context:ctx inFrame:pageFrame];
-         CGContextRestoreGState(ctx);
+        CGContextScaleCTM(ctx, 1, -1);
+        [self drawText: self.customer.name context:ctx origin:CGPointMake(160, 159)];
+        [self drawText: self.customer.street context:ctx origin:CGPointMake(160, 178)];
+        CGContextRestoreGState(ctx);
     }
     
     UIGraphicsEndPDFContext();
@@ -76,7 +87,7 @@
     [data writeToFile:pdfFilePath atomically:YES];
 }
 
--(void)drawText:(NSString *)text context:(CGContextRef)currentContext inFrame:(CGRect)pageFrame
+-(void)drawText:(NSString *)text context:(CGContextRef)currentContext origin:(CGPoint)origin
 {
     
     NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:text];
@@ -89,7 +100,9 @@
     //CFAttributedStringRef currentText = CFAttributedStringCreate(NULL, stringRef, NULL);
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString(stringRef);
     
-    CGRect frameRect = CGRectMake(160, -159, 300, 50);
+    int x = origin.x;
+    int y = -origin.y; // The context is flipped upside-down
+    CGRect frameRect = CGRectMake(x, y, 300, 50);
     CGMutablePathRef framePath = CGPathCreateMutable();
     CGPathAddRect(framePath, NULL, frameRect);
     
@@ -108,7 +121,7 @@
     // Core Text draws from the bottom-left corner up, so flip
     // the current transform prior to drawing.
     //CGContextTranslateCTM(currentContext, 0, -pageFrame.size.height);
-    CGContextScaleCTM(currentContext, 1.0, -1.0);
+    //CGContextScaleCTM(currentContext, 1.0, -1.0);
     
     // Draw the frame.
     CTFrameDraw(frameRef, currentContext);
