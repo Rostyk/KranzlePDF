@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KranzlePDF/Vendor/PDFRenderer/PDFRenderer.m"
-            timestampString = "442835737.118066"
+            timestampString = "442836455.4942"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "-drawText:context:origin:"
             landmarkType = "5">
          </BreakpointContent>
